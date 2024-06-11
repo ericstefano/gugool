@@ -31,7 +31,7 @@ const { list, containerProps, wrapperProps } = useVirtualList(items.value!, {
 </script>
 
 <template>
-  <div class="w-full flex flex-col">
+  <div class="w-full flex flex-col" :class="{ 'justify-center': !items?.length }">
     <template v-if="items?.length">
       <div class="flex my-6 items-center">
         <NuxtLink to=".." class="mr-2">
